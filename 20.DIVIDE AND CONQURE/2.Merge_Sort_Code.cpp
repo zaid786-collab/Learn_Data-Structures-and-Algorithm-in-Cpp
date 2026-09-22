@@ -4,8 +4,8 @@ using namespace std;
 // Combine Function
 void merge(int arr[],int si,int mid,int ei){  
     vector<int> temp;
-    int i = si;
-    int j = mid+1;
+    int i = si;    // traverse on left half
+    int j = mid+1;  // traverse on right half
 
     while(i<=mid && j<=ei){
         if(arr[i]<=arr[j]){
@@ -15,7 +15,7 @@ void merge(int arr[],int si,int mid,int ei){
             temp.push_back(arr[j++]);
         }
     }
-    // If one array ends the put remaining sorted nums of other arrar as it is.
+    // If one array ends then put remaining sorted nums of other array as it is.
     while(i<=mid){
         temp.push_back(arr[i++]);
     }
