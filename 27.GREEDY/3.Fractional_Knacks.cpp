@@ -1,3 +1,10 @@
+// 1. Calculate value/weight
+// 2. Sort descending
+// 3. If item fits → take full
+// 4. Otherwise → take fraction
+// 5. Stop when capacity = 0
+
+
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -26,7 +33,7 @@ int fractionalKnapsack(vector<int> val,vector<int> wt,int W) {
             ans += val[index];
             W -= wt[index];
         }else {
-            ans += ratio[index].first * W;
+            ans += ratio[i].first * W;
             W = 0;
             break;
         }
@@ -42,6 +49,6 @@ int main () {
     int W = 50;
 
     cout << "Max Value in Fractional Knapsack : " << fractionalKnapsack(val,wt,W) << endl;
-    
+
     return 0;
 }
