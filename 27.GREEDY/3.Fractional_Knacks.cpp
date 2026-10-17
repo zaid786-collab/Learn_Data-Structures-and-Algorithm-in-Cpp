@@ -10,10 +10,10 @@ using namespace std;
 
 bool compare(pair<double,int> p1, pair<double,int> p2)
 {
-    return p1.first > p2.first;      // Sorting Ration in Descending Order.
+    return p1.first > p2.first;      // Sorting Relation in Descending Order.
 }
 
-int fractionalKnapsack(vector<int> val,vector<int> wt,int W) {
+int fractionalKnapsack(vector<int> val,vector<int> wt,int W) { // W == Total Capacity of Bag
     int n = val.size();
     vector<pair<double,int>> ratio(n,make_pair(0.0,0));
 
