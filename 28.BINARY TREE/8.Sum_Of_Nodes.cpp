@@ -46,7 +46,7 @@ int main () {
 
     Node* root = buildtree(nodes);
 
-    cout << "Sum of Nodes : "<< sum(root) << endl;
+    cout << "Sum of Nodes of tree is  : "<< sum(root) << endl;
 
     return 0;
 }
