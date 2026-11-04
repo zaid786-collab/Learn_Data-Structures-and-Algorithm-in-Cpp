@@ -29,16 +29,6 @@ Node* buildtree(vector<int> Nodes) {
     return currnode;
 }
 
-int height (Node* root) {
-    if(root == NULL) {
-        return 0;
-    }
-
-    int leftht = height(root->left);
-    int rightht = height(root->right);
-
-    return max(leftht, rightht) + 1;
-}
 
 pair<int, int> diameter(Node* root) {
     if(root == NULL) {
@@ -49,7 +39,7 @@ pair<int, int> diameter(Node* root) {
     pair<int,int> leftinfo = diameter(root->left);
     pair<int,int> rightnfo = diameter(root->right);
 
-    int currdiameter = leftinfo.second + rightnfo.second + 1;
+    int currdiameter = leftinfo.second + rightnfo.second + 1;   // Height of a Tree Logic : 
 
     int finaldm = max(currdiameter, max(leftinfo.first, rightnfo.first));
     int finalht = max(leftinfo.second , rightnfo.second) + 1;
