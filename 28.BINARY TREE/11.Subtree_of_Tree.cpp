@@ -58,13 +58,7 @@ bool isSubtree(Node* root, Node* subRoot) {
         }
     }
 
-    bool isleftsubtree = isSubtree(root->left,subRoot);
-
-    if(!isleftsubtree) {
-        return isSubtree(root->right, subRoot);
-    }
-
-    return true;
+    return isSubtree(root->left,subRoot) || isSubtree(root->right, subRoot);
 }
 
 int main () {
